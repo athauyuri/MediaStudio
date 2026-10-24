@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-media-studio"
+version = "0.1.0"
+description = "Native local-first Windows media studio"
+requires-python = ">=3.13,<3.14"
+dependencies = ["PySide6>=6.8,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "pytest-qt>=4.4,<5"]
+
+[project.scripts]
+media-studio = "app.main:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+pythonpath = ["."]

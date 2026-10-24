@@ -1,0 +1,10 @@
+title = "Local Media Studio"
+width = 1100
+height = 720
+worker_count = 2
+log_max_bytes = 2000000
+log_backup_count = 3
+database_path = "data/media_studio.db"
+scan_chunk_size = 250
+scan_concurrency = 1
+scan_excluded_paths = []
